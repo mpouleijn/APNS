@@ -7,7 +7,7 @@ module APNS
     attr_accessor :content_available
 
     def initialize(device_token, message)
-      puts "initialize(#{device_token}, #{message.inspect})"
+      puts "initialize(#{device_token.inspect}, #{message.inspect})"
       self.device_token = device_token
       if message.is_a?(Hash)
         self.alert = message[:alert]
